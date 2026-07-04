@@ -179,3 +179,65 @@ petal.remove();
 },9000);
 
 },700);
+
+// ===== Confetti =====
+
+const confettiCanvas = document.getElementById("confetti");
+const confettiCtx = confettiCanvas.getContext("2d");
+
+confettiCanvas.width = window.innerWidth;
+confettiCanvas.height = window.innerHeight;
+
+let confettis = [];
+
+function launchConfetti(){
+
+    confettis = [];
+
+    for(let i=0;i<180;i++){
+
+        confettis.push({
+
+            x:Math.random()*confettiCanvas.width,
+
+            y:-20,
+
+            size:5+Math.random()*8,
+
+            speed:2+Math.random()*5,
+
+            color:`hsl(${Math.random()*360},100%,60%)`
+
+        });
+
+    }
+
+    animateConfetti();
+
+}
+
+function animateConfetti(){
+
+    confettiCtx.clearRect(0,0,confettiCanvas.width,confettiCanvas.height);
+
+    confettis.forEach(c=>{
+
+        confettiCtx.fillStyle=c.color;
+
+        confettiCtx.fillRect(c.x,c.y,c.size,c.size);
+
+        c.y+=c.speed;
+
+    });
+
+    if(confettis.some(c=>c.y<confettiCanvas.height)){
+
+        requestAnimationFrame(animateConfetti);
+
+    }else{
+
+        confettiCtx.clearRect(0,0,confettiCanvas.width,confettiCanvas.height);
+
+    }
+
+}

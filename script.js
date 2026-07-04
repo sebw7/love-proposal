@@ -72,9 +72,39 @@ document.getElementById("proposalBtn").addEventListener("click",()=>{
 
 document.getElementById("letter").style.display="none";
 
-document.getElementById("proposal").style.display="flex";
+const countdown=document.getElementById("countdown");
 
-  document.getElementById("proposal").classList.add("fadeIn");  
+const proposal=document.getElementById("proposal");
+
+const number=document.getElementById("countNumber");
+
+countdown.style.display="flex";
+
+let count=3;
+
+number.innerHTML=count;
+
+const timer=setInterval(()=>{
+
+count--;
+
+if(count>0){
+
+number.innerHTML=count;
+
+}else{
+
+clearInterval(timer);
+
+countdown.style.display="none";
+
+proposal.style.display="flex";
+
+proposal.classList.add("fadeIn");
+
+}
+
+},1000);
 
 });
 

@@ -23,7 +23,11 @@ typeWriter();
 
 // Button
 document.getElementById("startBtn").addEventListener("click", () => {
-    alert("Our journey is just beginning... ❤️");
+
+    document.getElementById("home").style.display = "none";
+
+    document.getElementById("story").style.display = "flex";
+
 });
 
 // Floating Hearts
@@ -47,3 +51,4 @@ setInterval(() => {
     }, 8000);
 
 }, 400);
+

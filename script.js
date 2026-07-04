@@ -31,6 +31,8 @@ document.getElementById("startBtn").addEventListener("click", () => {
 
     document.getElementById("story").style.display = "flex";
 
+    document.getElementById("story").classList.add("fadeIn");
+
 });
 
 // Floating Hearts
@@ -62,6 +64,8 @@ document.getElementById("story").style.display="none";
 
 document.getElementById("letter").style.display="flex";
 
+document.getElementById("letter").classList.add("fadeIn");    
+
 });
 
 document.getElementById("proposalBtn").addEventListener("click",()=>{
@@ -69,6 +73,8 @@ document.getElementById("proposalBtn").addEventListener("click",()=>{
 document.getElementById("letter").style.display="none";
 
 document.getElementById("proposal").style.display="flex";
+
+  document.getElementById("proposal").classList.add("fadeIn");  
 
 });
 

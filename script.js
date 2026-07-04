@@ -131,3 +131,25 @@ function celebrate(){
     },1200);
 
 }
+
+const sky = document.getElementById("shooting-stars");
+
+setInterval(()=>{
+
+    const star=document.createElement("div");
+
+    star.className="star";
+
+    star.style.left=Math.random()*window.innerWidth+"px";
+
+    star.style.top=Math.random()*250+"px";
+
+    sky.appendChild(star);
+
+    setTimeout(()=>{
+
+        star.remove();
+
+    },3000);
+
+},1800);

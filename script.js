@@ -52,3 +52,11 @@ setInterval(() => {
 
 }, 400);
 
+
+document.getElementById("nextBtn").addEventListener("click",()=>{
+
+document.getElementById("story").style.display="none";
+
+document.getElementById("letter").style.display="flex";
+
+});

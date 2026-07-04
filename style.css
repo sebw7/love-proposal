@@ -254,3 +254,45 @@ opacity:0;
 }
 
 }
+
+#story{
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+}
+
+#story h2{
+    font-size:45px;
+    color:#ff4d88;
+    margin-bottom:20px;
+}
+
+#story p{
+    max-width:700px;
+    font-size:20px;
+    color:#ddd;
+    line-height:35px;
+    margin-bottom:20px;
+}
+
+#nextBtn{
+    margin-top:25px;
+    padding:15px 40px;
+    border:none;
+    border-radius:40px;
+    background:#ff4d88;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#nextBtn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px #ff4d88;
+    }

@@ -115,25 +115,10 @@ function accepted(){
     launchConfetti();
 
     heartExplosion();
-  
+
     document.getElementById("proposal").style.display="none";
 
-document.getElementById("ending").style.display="flex";
-<div style="display:flex;justify-content:center;align-items:center;height:100vh;background:#050816;color:white;text-align:center;padding:20px;">
-
-<div>
-
-<h1 style="font-size:70px;">🎉❤️</h1>
-
-<h2>You Made Me The Happiest Person Alive!</h2>
-
-<h3>I Promise To Always Respect You, Care For You & Stay By Your Side. 💖</h3>
-
-</div>
-
-</div>
-
-`;
+    document.getElementById("ending").style.display="flex";
 
 }
 

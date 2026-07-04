@@ -273,3 +273,21 @@ function animateConfetti(){
     }
 
 }
+
+function heartExplosion(){
+
+const heart=document.createElement("div");
+
+heart.className="bigHeart";
+
+heart.innerHTML="❤️";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},2000);
+
+}

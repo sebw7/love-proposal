@@ -80,7 +80,9 @@ document.getElementById("proposal").style.display="flex";
 
 function accepted(){
 
-document.body.innerHTML=`
+    celebrate();
+
+    document.body.innerHTML=`
 
 <div style="display:flex;justify-content:center;align-items:center;height:100vh;background:#050816;color:white;text-align:center;padding:20px;">
 
@@ -103,3 +105,29 @@ document.body.innerHTML=`
 document.getElementById("yesBtn").onclick=accepted;
 
 document.getElementById("yesBtn2").onclick=accepted;
+
+const canvas = document.getElementById("fireworks");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+function celebrate(){
+
+    for(let i=0;i<120;i++){
+
+        let x=Math.random()*canvas.width;
+        let y=Math.random()*canvas.height;
+
+        ctx.beginPath();
+        ctx.arc(x,y,4,0,Math.PI*2);
+        ctx.fillStyle=`hsl(${Math.random()*360},100%,60%)`;
+        ctx.fill();
+
+    }
+
+    setTimeout(()=>{
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+    },1200);
+
+}

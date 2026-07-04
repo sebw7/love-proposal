@@ -24,6 +24,9 @@ typeWriter();
 // Button
 document.getElementById("startBtn").addEventListener("click", () => {
 
+    const music = document.getElementById("bgMusic");
+    music.play();
+
     document.getElementById("home").style.display = "none";
 
     document.getElementById("story").style.display = "flex";

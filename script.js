@@ -113,7 +113,9 @@ function accepted(){
     celebrate();
 
     launchConfetti();
-    
+
+    heartExplosion();
+  
     document.body.innerHTML=`
 
 <div style="display:flex;justify-content:center;align-items:center;height:100vh;background:#050816;color:white;text-align:center;padding:20px;">

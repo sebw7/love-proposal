@@ -25,3 +25,25 @@ typeWriter();
 document.getElementById("startBtn").addEventListener("click", () => {
     alert("Our journey is just beginning... ❤️");
 });
+
+// Floating Hearts
+const hearts = document.querySelector(".hearts");
+
+setInterval(() => {
+    const heart = document.createElement("span");
+
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize = (15 + Math.random() * 25) + "px";
+
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    hearts.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+
+}, 400);

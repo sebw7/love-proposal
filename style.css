@@ -623,3 +623,86 @@ transform:scale(1.2) rotate(8deg);
 }
 
 }
+
+/* YES Button Pulse */
+
+#yesBtn,
+#yesBtn2{
+
+animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+box-shadow:0 0 25px #ff4d88;
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* Heart Explosion */
+
+.bigHeart{
+
+position:fixed;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:220px;
+
+z-index:99999;
+
+animation:heartBoom 2s forwards;
+
+pointer-events:none;
+
+}
+
+@keyframes heartBoom{
+
+0%{
+
+opacity:0;
+
+transform:translate(-50%,-50%) scale(.2);
+
+}
+
+40%{
+
+opacity:1;
+
+transform:translate(-50%,-50%) scale(1.3);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translate(-50%,-50%) scale(3);
+
+}
+
+}

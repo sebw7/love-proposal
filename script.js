@@ -1,4 +1,3 @@
-alert("Script Loaded");
 // Loading Screen
 window.addEventListener("load", () => {
     setTimeout(() => {
